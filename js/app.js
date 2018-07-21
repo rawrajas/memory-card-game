@@ -181,14 +181,18 @@ class Stopwatch {
 
 //Create a function for a new game
 
-newGame = () =>{
+newGame = () =>
+{
     //create an empty string for inserting into index.html
     let htmlString = '';
     //Insert the HTML into htmlString
-    for(let i=0; i<deck.cards.length; i++){
+    for (let i = 0; i < deck.cards.length; i++) {
         htmlString += `<li class="${deck.cards[i].class}" onclick="stopwatch.start();clickFunction(this)"><a class="${deck.cards[i].icon}"></a></li>`;
-    };
-
+    }
+    ;
+    //Write htmlString into deck id
+    document.getElementById('deck').innerHTML = htmlString;
+}
 
 
 /*
