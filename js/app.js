@@ -1,7 +1,74 @@
 /*
  * Create a list that holds all of your cards
  */
-
+const deck = {
+    cards:[
+        {
+            class: 'card',
+            icon: 'fa fa-anchor'
+        },
+        {
+            class: 'card',
+            icon: 'fa fa-anchor'
+        },
+        {
+            class: 'card',
+            icon: 'fa fa-bicycle'
+        },
+        {
+            class: 'card',
+            icon: 'fa fa-bicycle'
+        },
+        {
+            class: 'card',
+            icon: 'fa fa-bolt'
+        },
+        {
+            class: 'card',
+            icon: 'fa fa-bolt'
+        },
+        {
+            class: 'card',
+            icon: 'fa fa-bomb'
+        },
+        {
+            class: 'card',
+            icon: 'fa fa-bomb'
+        },
+        {
+            class: 'card',
+            icon: 'fa fa-cube'
+        },
+        {
+            class: 'card',
+            icon: 'fa fa-cube'
+        },
+        {
+            class: 'card',
+            icon: 'fa fa-diamond'
+        },
+        {
+            class: 'card',
+            icon: 'fa fa-diamond'
+        },
+        {
+            class: 'card',
+            icon: 'fa fa-leaf'
+        },
+        {
+            class: 'card',
+            icon: 'fa fa-leaf'
+        },
+        {
+            class: 'card',
+            icon: 'fa fa-paper-plane-o'
+        },
+        {
+            class: 'card',
+            icon: 'fa fa-paper-plane-o'
+        }
+    ]
+}
 
 /*
  * Display the cards on the page
