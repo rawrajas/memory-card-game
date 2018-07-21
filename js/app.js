@@ -179,6 +179,18 @@ class Stopwatch {
     }
 }
 
+//Create a function for a new game
+
+newGame = () =>{
+    //create an empty string for inserting into index.html
+    let htmlString = '';
+    //Insert the HTML into htmlString
+    for(let i=0; i<deck.cards.length; i++){
+        htmlString += `<li class="${deck.cards[i].class}" onclick="stopwatch.start();clickFunction(this)"><a class="${deck.cards[i].icon}"></a></li>`;
+    };
+
+
+
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
