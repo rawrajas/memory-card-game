@@ -97,6 +97,11 @@ let seenTiles =[];
 //Declare a counter for the flipped tiles
 let tilesFlipped = 0;
 
+//Declare an empty array for tile matches
+
+let tilesMatched = [];
+
+
 
 /*
  * set up the event listener for a card. If a card is clicked:
