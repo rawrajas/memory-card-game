@@ -70,12 +70,6 @@ const deck = {
     ]
 }
 
-/*
- * Display the cards on the page
- *   - shuffle the list of cards using the provided "shuffle" method below
- *   - loop through each card and create its HTML
- *   - add each card's HTML to the page
- */
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
@@ -91,6 +85,11 @@ function shuffle(array) {
 
     return array;
 }
+
+//Shuffle the cards using the function and log it to the console
+
+shuffle(deck.cards);
+console.log(deck.cards);
 
 
 /*
