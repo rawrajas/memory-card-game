@@ -94,7 +94,10 @@ console.log(deck.cards);
 //Declare an empty array for the seen tiles
 let seenTiles =[];
 
-//Declare a counter for the the turned
+//Declare a counter for the flipped tiles
+let tilesFlipped = 0;
+
+
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
