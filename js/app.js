@@ -105,6 +105,17 @@ let tilesMatched = [];
 
 let numMoves = 0;
 
+let time = 0;
+
+//Declare function for timer
+
+timer = () =>{
+    setInterval(function () {
+        time++;
+        document.getElementsByClassName('timer')[0].innerHTML = time;
+    }, 1000);
+};
+
 
 //Create a function for a new game
 
