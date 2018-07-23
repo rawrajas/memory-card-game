@@ -134,31 +134,38 @@ clickFunction = (element) =>
             element.setAttribute("class", "card open show");
             seenTiles.push(element);
         }
-    }
-};
 
 //Card match- If the two cards in the seenTiles array have the same class name
+        if (tilesFlipped === 2 && seenTiles[0].children[0].className === seenTiles[1].children[0].className) {
+            //Set attribute as a card match to both cards
+            seenTiles[0].setAttribute("class", "card match");
+            seenTiles[1].setAttribute("class", "card match");
 
-if (tilesFlipped === 2 && seenTiles[0].children[0].className === seenTiles[1].children[0].className){
-    //Set attribute as a card match to both cards
-    seenTiles[0].setAttribute("class", "card match");
-    seenTiles[1].setAttribute("class", "card match");
+            //Add the cards to the tilesMatched array
+            tilesMatched.push(seenTiles[0]);
+            tilesMatched.push(seenTiles[1]);
 
-    //Add the cards to the tilesMatched array
-    tilesMatched.push(seenTiles[0]);
-    tilesMatched.push(seenTiles[1]);
+            //Clear the seenTiles array and set the tilesFlipped counter to 0
+            seenTiles = [];
+            tilesFlipped = 0;
+        }
+        //If the tilesMatched array is equal to the amount of cards array, win the game
+        if (tilesMatched.length == deck.cards.length) {
+            console.log('You win!');
+        }
+        //Card mismatch- If the two cards in the seenTiles array DO NOT have the same class name
+        else if (tilesFlipped === 2 && seenTiles[0].children[0].className !== seenTiles[1].children[0].className) {
 
-    //Clear the seenTiles array and set the tilesFlipped counter to 0
-    seenTiles = [];
-    tilesFlipped = 0;
+                //Reset the mismatched cards to original attribute
+                seenTiles[0].setAttribute("class", "card");
+                seenTiles[1].setAttribute("class", "card");
 
-    //If the tilesMatched array is equal to the amount of cards array, win the game
-
-    if (tilesMatched.length == deck.cards.length){
-        console.log('You win!');
+                //Clear the seenTiles array and set the tilesFlipped counter to 0
+                seenTiles = [];
+                tilesFlipped = 0;
+        }
     }
 };
-
 
 /*
  * set up the event listener for a card. If a card is clicked:
