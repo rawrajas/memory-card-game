@@ -119,6 +119,7 @@ newGame = () =>
     ;
     //Write htmlString into deck id
     document.getElementById('deck').innerHTML = htmlString;
+    document.getElementsByClassName('moves')[0].innerHTML = 0;
 };
 
 //Function for when a card is clicked
