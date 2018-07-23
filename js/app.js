@@ -151,7 +151,15 @@ if (tilesFlipped === 2 && seenTiles[0].children[0].className === seenTiles[1].ch
     //Clear the seenTiles array and set the tilesFlipped counter to 0
     seenTiles = [];
     tilesFlipped = 0;
+
+    //If the tilesMatched array is equal to the amount of cards array, win the game
+
+    if (tilesMatched.length == deck.cards.length){
+        console.log('You win!');
+    }
 };
+
+
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
