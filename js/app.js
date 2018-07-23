@@ -136,6 +136,11 @@ clickFunction = (element) =>
             seenTiles.push(element);
         }
 
+        if (tilesFlipped == 2){
+            numMoves++;
+            document.getElementsByClassName('moves')[0].innerHTML = numMoves;
+        }
+
 //Card match- If the two cards in the seenTiles array have the same class name
         if (tilesFlipped === 2 && seenTiles[0].children[0].className === seenTiles[1].children[0].className) {
             //Set attribute as a card match to both cards
