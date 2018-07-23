@@ -114,14 +114,31 @@ newGame = () =>
     let htmlString = '';
     //Insert the HTML into htmlString
     for (let i = 0; i < deck.cards.length; i++) {
-        htmlString += `<li class="${deck.cards[i].class}""><a class="${deck.cards[i].icon}"></a></li>`;
+        htmlString += `<li class="${deck.cards[i].class}" onclick=clickFunction(this)><a class="${deck.cards[i].icon}"></a></li>`;
     }
     ;
     //Write htmlString into deck id
     document.getElementById('deck').innerHTML = htmlString;
-}
+};
 
+//Function for when a card is clicked
+clickFunction = (element) =>
+{
 
+    //If a card is already flipped log message to the console
+    if (element.getAttribute("class") === "card open show" || element.getAttribute("class") === "card match") {
+        console.log("already opened");
+    } else {
+        //If there are less than two cards flipped, make the flippedCards equal to 1 , change the CSS attribute and push the element to seenTiles array
+        if (tilesFlipped < 2) {
+            tilesFlipped += 1;
+            element.setAttribute("class", "card open show");
+            seenTiles.push(element);
+        }
+    }
+};
+
+//
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
@@ -132,3 +149,4 @@ newGame = () =>
  *    + increment the move counter and display it on the page (put this functionality in another function that you call from this one)
  *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
  */
+newGame();
