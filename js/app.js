@@ -124,7 +124,6 @@ newGame = () =>
 //Function for when a card is clicked
 clickFunction = (element) =>
 {
-
     //If a card is already flipped log message to the console
     if (element.getAttribute("class") === "card open show" || element.getAttribute("class") === "card match") {
         console.log("already opened");
@@ -138,7 +137,21 @@ clickFunction = (element) =>
     }
 };
 
-//
+//Card match- If the two cards in the seenTiles array have the same class name
+
+if (tilesFlipped === 2 && seenTiles[0].children[0].className === seenTiles[1].children[0].className){
+    //Set attribute as a card match to both cards
+    seenTiles[0].setAttribute("class", "card match");
+    seenTiles[1].setAttribute("class", "card match");
+
+    //Add the cards to the tilesMatched array
+    tilesMatched.push(seenTiles[0]);
+    tilesMatched.push(seenTiles[1]);
+
+    //Clear the seenTiles array and set the tilesFlipped counter to 0
+    seenTiles = [];
+    tilesFlipped = 0;
+};
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
