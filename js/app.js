@@ -200,6 +200,8 @@ let stopwatch = new Stopwatch(
 
 newGame = () =>
 {
+    //Reset the stopwatch
+    stopwatch.reset();
     //create an empty string for inserting into index.html
     let htmlString = '';
     //Insert the HTML into htmlString
