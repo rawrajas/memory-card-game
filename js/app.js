@@ -200,8 +200,9 @@ let stopwatch = new Stopwatch(
 
 newGame = () =>
 {
-    //Reset the stopwatch
+    //Reset the stopwatch and moves
     stopwatch.reset();
+    numMoves =0;
     //create an empty string for inserting into index.html
     let htmlString = '';
     //Insert the HTML into htmlString
@@ -269,6 +270,8 @@ clickFunction = (element) =>
         }
     }
 };
+
+
 
 /*
  * set up the event listener for a card. If a card is clicked:
