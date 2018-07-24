@@ -105,6 +105,9 @@ let tilesMatched = [];
 
 let numMoves = 0;
 
+//Declare variable for final moves count
+let movesResult = 0;
+
 //Stopwatch from https://codepen.io/_Billy_Brown/pen/dbJeh
 
 class Stopwatch {
@@ -262,6 +265,10 @@ clickFunction = (element) =>
         if (tilesMatched.length == deck.cards.length) {
             console.log('You win!');
             stopwatch.stop();
+            //Display the final moves result on the win page
+            document.getElementsByClassName('movesResult')[0].innerHTML = numMoves;
+
+            //Hide the game container and show the win screen container
             document.getElementById("container").setAttribute("class", "container-remove");
             document.getElementById("game-win").removeAttribute("class", "container-remove");
         }
