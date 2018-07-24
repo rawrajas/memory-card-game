@@ -203,6 +203,8 @@ newGame = () =>
     //Reset the stopwatch and moves
     stopwatch.reset();
     numMoves =0;
+    document.getElementById("star1").removeAttribute("star-remove");
+    document.getElementById("star2").removeAttribute("star-remove");
     //create an empty string for inserting into index.html
     let htmlString = '';
     //Insert the HTML into htmlString
@@ -213,8 +215,6 @@ newGame = () =>
     //Write htmlString into deck id
     document.getElementById('deck').innerHTML = htmlString;
     document.getElementsByClassName('moves')[0].innerHTML = 0;
-
-
 };
 
 //Function for when a card is clicked
@@ -260,7 +260,8 @@ clickFunction = (element) =>
         //If the tilesMatched array is equal to the amount of cards array, win the game
         if (tilesMatched.length == deck.cards.length) {
             console.log('You win!');
-            document.getElementById("container").setAttribute("class", "container-remove");
+            stopwatch.stop();
+            document.getElementById("container").setAttribute("container-hide");
         }
         //Card mismatch- If the two cards in the seenTiles array DO NOT have the same class name
         else if (tilesFlipped === 2 && seenTiles[0].children[0].className !== seenTiles[1].children[0].className){
