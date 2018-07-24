@@ -107,3 +107,8 @@ h1 {
     float: right;
     cursor: pointer;
 }
+
+.start-button{
+  display: block;
+  text-align: center;
+}
