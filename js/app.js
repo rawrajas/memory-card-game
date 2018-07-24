@@ -268,6 +268,9 @@ clickFunction = (element) =>
             //Display the final moves result on the win page
             document.getElementsByClassName('movesResult')[0].innerHTML = numMoves;
 
+            //Display the final time result on the win page
+            document.getElementsByClassName('timeResult')[0].innerHTML = document.getElementsByClassName('stopwatch')[0].innerHTML;
+
             //Hide the game container and show the win screen container
             document.getElementById("container").setAttribute("class", "container-remove");
             document.getElementById("game-win").removeAttribute("class", "container-remove");
