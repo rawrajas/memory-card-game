@@ -260,6 +260,7 @@ clickFunction = (element) =>
         //If the tilesMatched array is equal to the amount of cards array, win the game
         if (tilesMatched.length == deck.cards.length) {
             console.log('You win!');
+            document.getElementById("container").setAttribute("class", "container-remove");
         }
         //Card mismatch- If the two cards in the seenTiles array DO NOT have the same class name
         else if (tilesFlipped === 2 && seenTiles[0].children[0].className !== seenTiles[1].children[0].className){
