@@ -213,6 +213,8 @@ newGame = () =>
     //Write htmlString into deck id
     document.getElementById('deck').innerHTML = htmlString;
     document.getElementsByClassName('moves')[0].innerHTML = 0;
+
+
 };
 
 //Function for when a card is clicked
@@ -232,6 +234,12 @@ clickFunction = (element) =>
         if (tilesFlipped == 2){
             numMoves++;
             document.getElementsByClassName('moves')[0].innerHTML = numMoves;
+            if (numMoves > 10){
+                document.getElementById("star1").setAttribute("class", "star-remove");
+            }
+            if (numMoves > 15){
+                document.getElementById("star2").setAttribute("class", "star-remove");
+            }
         }
 
 //Card match- If the two cards in the seenTiles array have the same class name
@@ -247,6 +255,7 @@ clickFunction = (element) =>
             //Clear the seenTiles array and set the tilesFlipped counter to 0
             seenTiles = [];
             tilesFlipped = 0;
+
         }
         //If the tilesMatched array is equal to the amount of cards array, win the game
         if (tilesMatched.length == deck.cards.length) {
