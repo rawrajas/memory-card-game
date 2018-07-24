@@ -215,6 +215,7 @@ newGame = () =>
     //Write htmlString into deck id
     document.getElementById('deck').innerHTML = htmlString;
     document.getElementsByClassName('moves')[0].innerHTML = 0;
+    document.getElementById('game-win').setAttribute("class", "container-remove");
 };
 
 //Function for when a card is clicked
@@ -261,7 +262,8 @@ clickFunction = (element) =>
         if (tilesMatched.length == deck.cards.length) {
             console.log('You win!');
             stopwatch.stop();
-            document.getElementById("container").setAttribute("container-hide");
+            document.getElementById("container").setAttribute("class", "container-remove");
+            document.getElementById("game-win").removeAttribute("class", "container-remove");
         }
         //Card mismatch- If the two cards in the seenTiles array DO NOT have the same class name
         else if (tilesFlipped === 2 && seenTiles[0].children[0].className !== seenTiles[1].children[0].className){
