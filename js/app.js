@@ -240,9 +240,11 @@ clickFunction = (element) =>
             document.getElementsByClassName('moves')[0].innerHTML = numMoves;
             if (numMoves > 10){
                 document.getElementById("star1").setAttribute("class", "star-remove");
+                document.getElementById("finalStar1").setAttribute("class", "star-remove");
             }
             if (numMoves > 15){
                 document.getElementById("star2").setAttribute("class", "star-remove");
+                document.getElementById("finalStar2").setAttribute("class", "star-remove");
             }
         }
 
