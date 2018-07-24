@@ -235,9 +235,12 @@ clickFunction = (element) =>
             seenTiles.push(element);
         }
 
+        //Every time two tiles are flipped, add to moves counter and display it on HTML
         if (tilesFlipped == 2){
             numMoves++;
             document.getElementsByClassName('moves')[0].innerHTML = numMoves;
+
+            //Remove a star from both game and win screen at 11 and 16 moves
             if (numMoves > 10){
                 document.getElementById("star1").setAttribute("class", "star-remove");
                 document.getElementById("finalStar1").setAttribute("class", "star-remove");
