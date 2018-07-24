@@ -206,8 +206,7 @@ newGame = () =>
     //Reset the stopwatch and moves
     stopwatch.reset();
     numMoves =0;
-    document.getElementById("star1").removeAttribute("star-remove");
-    document.getElementById("star2").removeAttribute("star-remove");
+
     //create an empty string for inserting into index.html
     let htmlString = '';
     //Insert the HTML into htmlString
