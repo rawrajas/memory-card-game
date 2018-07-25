@@ -281,13 +281,12 @@ clickFunction = (element) =>
         }
         //Card mismatch- If the two cards in the seenTiles array DO NOT have the same class name
         else if (tilesFlipped === 2 && seenTiles[0].children[0].className !== seenTiles[1].children[0].className){
-
             //Allow enough time for the user to see the flipped cards before flipping them back over
             setTimeout(function(){
 
             //Reset the mismatched cards to original attribute
-            seenTiles[0].setAttribute("class", "card");
-            seenTiles[1].setAttribute("class", "card");
+            seenTiles[0].setAttribute("class", "mismatch card");
+            seenTiles[1].setAttribute("class", "mismatch card");
 
             //Clear the seenTiles array and set the tilesFlipped counter to 0
             seenTiles = [];
