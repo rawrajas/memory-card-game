@@ -103,15 +103,16 @@ h1 {
     font-size: 33px;
 }
 
-
 .deck .card.match {
     cursor: default;
     background: #02ccba;
     font-size: 33px;
 }
 
+/* Animations */
+
 .match {
-  animation: flash 4s;
+  animation: flash 5s;
   -webkit-animation: flash 200ms;
 	-webkit-animation-duration: infinite;
 }
@@ -121,6 +122,31 @@ h1 {
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   perspective: 1000px;
+}
+
+.open{
+  animation: flip 500ms;
+  -webkit-animation: flip 200ms;
+	-webkit-animation-duration: infinite;
+}
+
+@-webkit-keyframes flash {
+    0%   { background-color: #aa7ecd; }
+    49% { background-color: #02b3e4; }
+    50% { background-color: #aa7ecd; }
+    99% { background-color: #aa7ecd; }
+    100% { background-color: #02b3e4; }
+}
+
+@-webkit-keyframes flip {
+    0%   { -webkit-transform: rotateY(60deg);
+            color: #02b3e4; }
+    25% {-webkit-transform: rotateY(120deg);
+          color: #02b3e4; }
+    50% {-webkit-transform: rotateY(180deg);
+          color: #02b3e4; }
+    75% {-webkit-transform: rotateY(240deg) }
+    100% {-webkit-transform: rotateY(360deg) }
 }
 
 @keyframes shake {
@@ -140,16 +166,6 @@ h1 {
     transform: translate3d(4px, 0, 0);
   }
 }
-
-@-webkit-keyframes flash {
-    0%   { background-color: #aa7ecd; }
-    49% { background-color: #02b3e4; }
-    50% { background-color: #aa7ecd; }
-    99% { background-color: #aa7ecd; }
-    100% { background-color: #02b3e4; }
-}
-
-
 
 /*
   *Buttons

@@ -11,38 +11,37 @@
 <body>
   <div id="game-win" class="container">
     <section class="game-results">
-              <h1>You Win!</h1>
-    Time: <span class="timeResult"></span>
-    Moves: <span class="movesResult"></span>
-    Ranking:
-    <section class="game-stars">
-    <i id="finalStar1" class="fa fa-star"></i>
-    <i id="finalStar2" class="fa fa-star"></i>
-    <i id="finalStar3" class="fa fa-star"></i>
-  </section>
+      <h1>You Win!</h1>
+      Time: <span class="timeResult"></span>
+      Moves: <span class="movesResult"></span>
+      Ranking:
+      <section class="game-stars">
+      <i id="finalStar1" class="fa fa-star"></i>
+      <i id="finalStar2" class="fa fa-star"></i>
+      <i id="finalStar3" class="fa fa-star"></i>
+    </section>
     <button class="play-again" onclick="location.reload()">Play again?</button>
   </section>
-  </div>
-    <div id="container" class="container">
-        <header>
-            <h1>Matching Game</h1>
-        </header>
-        <section class="timer">
-Time: <span class="stopwatch"></span>
-</section>
-        <section class="score-panel">
-        	<ul class="stars">
-            Rank:
-        		<li><i id="star1" class="fa fa-star"></i></li>
-        		<li><i id="star2" class="fa fa-star"></i></li>
-            <li><i id="star3" class="fa fa-star"></i></li>
-        	</ul>
-          Moves: <span class="moves"></span>
-        </section>
-        <ul id="deck" class="deck">
-        </ul>
-        <button class="reset" onclick="location.reload()">Reset Game</button>
-    </div>
-    <script src="js/app.js"></script>
+</div>
+<div id="container" class="container">
+  <header>
+    <h1>Matching Game</h1>
+  </header>
+  <section class="timer">
+    Time: <span class="stopwatch"></span>
+  </section>
+  <section class="score-panel">
+    Rank:
+    <ul class="stars">
+      <li><i id="star1" class="fa fa-star"></i></li>
+      <li><i id="star2" class="fa fa-star"></i></li>
+      <li><i id="star3" class="fa fa-star"></i></li>
+    </ul>
+    Moves: <span class="moves"></span>
+  </section>
+  <ul id="deck" class="deck"></ul>
+  <button class="reset" onclick="location.reload()">Reset Game</button>
+</div>
+<script src="js/app.js"></script>
 </body>
 </html>
