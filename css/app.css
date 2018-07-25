@@ -109,6 +109,22 @@ h1 {
     font-size: 33px;
 }
 
+.match {
+  animation: flash 4s;
+  -webkit-animation: flash 200ms;
+	-webkit-animation-duration: infinite;
+}
+
+@-webkit-keyframes flash {
+    0%   { background-color: #aa7ecd; }
+    49% { background-color: #02b3e4; }
+    50% { background-color: #aa7ecd; }
+    99% { background-color: #aa7ecd; }
+    100% { background-color: #02b3e4; }
+}
+
+
+
 /*
   *Buttons
   */
@@ -188,3 +204,19 @@ h1 {
   font-family: sans-serif,open;
   font-size: 20px;
 }
+
+/* Responsive design elements*/
+
+
+@media screen and (max-width: 700px) {
+
+  .container ul{
+    display: inline-flex;
+    height: 100%;
+    width: 100%;
+  }
+  .deck .card {
+      height: 100px;
+      width: 100px;
+      margin: 10px;
+  }
