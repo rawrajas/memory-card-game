@@ -1,20 +1,28 @@
-# Memory Game Project
+# Memory Game
 
 ## Table of Contents
 
-* [Instructions](#instructions)
-* [Contributing](#contributing)
+1) Introduction
 
-## Instructions
+2) Instructions
 
-The starter project has some HTML and CSS styling to display a static version of the Memory Game project. You'll need to convert this project from a static project to an interactive one. This will require modifying the HTML and CSS files, but primarily the JavaScript file.
+3) Contributing
 
-To get started, open `js/app.js` and start building out the app's functionality
+## 1) Introduction
 
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
+This game was created using the starter code by Udacity (https://github.com/udacity/fend-project-memory-game).
 
-## Contributing
+A basic style framework and JS comments were provided, the rest was written by me, with the exception of the stopwatch function.
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+## 2) Instructions
 
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+Click on the cards one by one and find the matching symbols. A time and ranking will be provided once all cards are matched.
+
+Ranking system is as follows:
+Three stars- Less than 15 moves
+Two stars- Less than 21 moves
+One star- 21 or more moves
+
+## 3) Contributing
+
+Send a pull request via Github. (https://github.com/rawrajas/memory-card-game)
